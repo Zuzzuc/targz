@@ -28,7 +28,7 @@ catch_err(){
    				echo "Unknown mode. Supplied mode is '$3'"
    				;;
    			5)
-   				echo "Compression level must be between 1 and 9. Specified one was '$3'"
+   				echo "Incorrect compression level. It must be between 1 and 9. Specified one was '$3'"
    				;;
    		esac
    	else
