@@ -71,7 +71,7 @@ fi
 
 # Perform archive actions
 if [ ! -z "$input" ];then
-	if [ "$mode" == "archive" ] || [ -z $mode ];then
+	if [ "$mode" == "archive" ] || [ -z "$mode" ];then
 		if [ -e "$input" ];then
 			if [ "$output" == "STDOUT" ] || [ -z "$output" ];then
 				tar -cC "${input%/*}" "${input##*/}" | gzip -cf "-$compression_level"
