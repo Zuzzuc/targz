@@ -1,11 +1,15 @@
 # targz
 Simple script used to archive and unarchive .tar.gz files. Can be used both as a inline function and a standalone script.
 
-This readme will soon be written.
-
 # Usage
-
 ## Exampels
+`./targz.sh -i="$HOME/Desktop" -o="/tmp/desktop.tar.gz" -m="archive" -cl=9`<br>
+Archives the directory 'Desktop' with the higest compressesion mode(9) and saving it to '/tmp/desktop.tar.gz'<br>
+<br>
+
+`./targz.sh -i="/tmp/desktop.tar.gz" -o="$HOME" -m="unarchive"`<br>
+Unarchives the file desktop.tar.gz containing the directory 'Desktop' on '$HOME'<br>
+<br>
 
 ## Arguments
 
@@ -23,6 +27,23 @@ Example: `./targz.sh -i=Somefile.plist`
 #### This option will default to STDOUT if not set.
 <br>This option chooses where to output the processed file.<br><br>
 Example: `./targz.sh -i="/path/Somedir" -o="/tmp/dir.tar.gz"`
+<br><br><br>
+
+### Mode
+#### -m or --mode
+#### Requires a parameter
+#### This option will default to 'archive' if not set.
+<br>This option chooses wether to archive or unarchive files.<br>
+Supported modes are 'archive' and 'unarchive'<br><br>
+Example: `./targz.sh -i="/tmp/dir.tar.gz" -o="/tmp" -m=unarchive`
+<br><br><br>
+
+### Compression level
+#### -cl or --compression-level
+#### Requires a parameter
+#### This option will default to '6' if not set.
+<br>This option changes the compression level used when archiving files, with '1' being the fastest, with less compression, and '9' being the slowest, with optimal compression.<br><br>
+Example: `./targz.sh -i="/path/Somedir" -o="/tmp/dir.tar.gz" -m=archive -cl=9`
 <br><br><br>
 
 ## Exit codes
