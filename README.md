@@ -4,7 +4,7 @@ Simple script used to archive and unarchive .tar.gz files. Can be used both as a
 # Usage
 ## Exampels
 `./targz.sh -i="$HOME/Desktop" -o="/tmp/desktop.tar.gz" -m="archive" -cl=9`<br>
-Archives the directory 'Desktop' with the higest compressesion mode(9) and saving it to '/tmp/desktop.tar.gz'<br>
+Archives the directory 'Desktop' with the higest compressesion level(9) and saving it to '/tmp/desktop.tar.gz'<br>
 <br>
 
 `./targz.sh -i="/tmp/desktop.tar.gz" -o="$HOME" -m="unarchive"`<br>
